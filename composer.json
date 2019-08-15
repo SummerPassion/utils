@@ -1,0 +1,14 @@
+{
+    "name": "mustang/utils",
+    "description": "some useful buildtools for tp5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "summerpassion",
+            "email": "695998135@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
