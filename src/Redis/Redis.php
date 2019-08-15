@@ -1,8 +1,8 @@
 <?php
 
-namespace Utils\Redis;
+namespace Mustang\Utils\Redis;
 
-use Utils\Exceptions\RedisException;
+use Mustang\Utils\Exceptions\RedisException;
 
 /**
  * Redis类

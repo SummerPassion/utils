@@ -1,8 +1,8 @@
 <?php
 
-namespace Utils;
+namespace Mustang\Utils;
 
-use Utils\Redis\Redis;
+use Mustang\Utils\Redis\Redis;
 use think\Config;
 
 /**
