@@ -45,6 +45,9 @@ class Redis
 
     private function __construct($config, $attr = array())
     {
+        if (!extension_loaded('redis')) {
+            throw new \BadFunctionCallException('not support: redis');
+        }
         $this->attr = array_merge($this->attr, $attr);
         $this->redis = new \Redis();
         $this->port = $config['port'] ? $config['port'] : 6379;
@@ -554,6 +557,18 @@ class Redis
     public function lRem($key, $count, $value)
     {
         return $this->redis->lRem($key, $value, $count);
+    }
+
+    /**
+     * 修剪list
+     * @param $key
+     * @param $start
+     * @param $stop
+     * @return array
+     */
+    public function lTrim($key, $start, $stop)
+    {
+        return $this->redis->lTrim($key, $start, $stop);
     }
 
     /**
