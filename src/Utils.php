@@ -24,6 +24,6 @@ class Utils
 //        'port' => 6379,
 //        'auth' => '',
 //        ],
-        return Redis::getInstance(Config::get('redis'));
+        return Redis::getInstance(Config::get('redis'), Config::get('redis')['db_id']);
     }
 }
