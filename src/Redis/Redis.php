@@ -136,6 +136,16 @@ class Redis
     }
 
     /**
+     * @param $key
+     * create_at: 2020-05-22 16:39:38
+     * update_at: 2020-05-22 16:39:38
+     */
+    public function incr($key)
+    {
+        return $this->redis->incr($key);
+    }
+
+    /**
      * 为hash表设定一个字段的值
      * @param string $key 缓存key
      * @param string $field 字段
