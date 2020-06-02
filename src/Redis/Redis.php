@@ -696,8 +696,16 @@ class Redis
             $arr = $value;
         foreach ($arr as $row)
             $this->redis->sAdd($key, $row);
+    }
 
-        return true;
+    /**
+     * 添加集合。由于版本问题，扩展不支持批量添加。这里做了封装
+     * @param $key
+     * @param string
+     */
+    public function sAddSingle($key, $value)
+    {
+        return $this->redis->sAdd($key, $value);
     }
 
     /**
