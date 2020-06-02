@@ -696,6 +696,8 @@ class Redis
             $arr = $value;
         foreach ($arr as $row)
             $this->redis->sAdd($key, $row);
+
+        return true;
     }
 
     /**
