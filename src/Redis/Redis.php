@@ -696,6 +696,19 @@ class Redis
         return $this->redis->srem($key, $value);
     }
 
+    /**
+     * 从集合中弹出一个元素
+     * @param $key
+     * @param int $count
+     * @return array|bool|mixed|string
+     * create_at: 2020-11-13 16:51:37
+     * update_at: 2020-11-13 16:51:37
+     */
+    public function sPop($key, $count = 1)
+    {
+        return $this->redis->sPop($key, $count = 1);
+    }
+
     /*************redis管理操作命令*****************/
 
     /**
