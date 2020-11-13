@@ -737,7 +737,7 @@ class Redis
      */
     public function sPop($key, $count = 1)
     {
-        return $this->redis->sPop($key, $count = 1);
+        return $this->redis->sPop($key, $count);
     }
 
     /*************redis管理操作命令*****************/
