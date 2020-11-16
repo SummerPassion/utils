@@ -320,6 +320,19 @@ class Redis
     }
 
     /**
+     * 向集合种添加多个元素
+     * @param $key
+     * @param array $scoreAndVals
+     * @return int
+     * create_at: 2020-11-16 13:22:24
+     * update_at: 2020-11-16 13:22:24
+     */
+    public function zAddMulti($key, array $scoreAndVals)
+    {
+        return $this->redis->zAdd($key, ...$scoreAndVals);
+    }
+
+    /**
      * 给$value成员的order值，增加$num,可以为负数
      * @param string $key
      * @param string $num 序号
